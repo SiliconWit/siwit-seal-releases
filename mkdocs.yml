@@ -1,0 +1,65 @@
+site_name: SiliconWit Seal
+site_description: Simple, polished OpenPGP file encryption for everyone.
+site_url: https://siliconwit.github.io/siwit-seal-releases/
+repo_url: https://github.com/SiliconWit/siwit-seal-releases
+repo_name: SiliconWit/siwit-seal-releases
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; SiliconWit
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Install:
+      - Overview: install/index.md
+      - Linux (.deb): install/linux.md
+      - Windows (.msi): install/windows.md
+      - macOS: install/macos.md
+  - Quick start: quickstart.md
+  - FAQ: faq.md
+  - Releases: https://github.com/SiliconWit/siwit-seal-releases/releases
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SiliconWit
