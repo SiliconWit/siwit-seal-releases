@@ -90,4 +90,7 @@ extra:
 extra_css:
   - stylesheets/custom.css
 
+extra_javascript:
+  - javascripts/tawk.js
+
 copyright: Copyright &copy; 2026 SiliconWit
