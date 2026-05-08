@@ -92,5 +92,6 @@ extra_css:
 
 extra_javascript:
   - javascripts/tawk.js
+  - javascripts/copyright.js
 
-copyright: Copyright &copy; 2026 SiliconWit
+copyright: Copyright &copy; 2025 SiliconWit
