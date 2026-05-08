@@ -1,38 +1,46 @@
 site_name: SiliconWit Seal
 site_description: Simple, polished OpenPGP file encryption for everyone.
+site_author: SiliconWit
 site_url: https://siliconwit.github.io/siwit-seal-releases/
-repo_url: https://github.com/SiliconWit/siwit-seal-releases
+
 repo_name: SiliconWit/siwit-seal-releases
+repo_url: https://github.com/SiliconWit/siwit-seal-releases
 edit_uri: edit/main/docs/
-copyright: Copyright &copy; SiliconWit
 
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
-    - navigation.instant
-    - navigation.tracking
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - navigation.path
     - navigation.top
-    - search.suggest
     - search.highlight
+    - search.share
+    - search.suggest
     - content.code.copy
+    - content.tabs.link
     - content.action.edit
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+    - toc.follow
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/lock
+    repo: fontawesome/brands/github
 
 nav:
   - Home: index.md
@@ -45,21 +53,41 @@ nav:
   - FAQ: faq.md
   - Releases: https://github.com/SiliconWit/siwit-seal-releases/releases
 
+plugins:
+  - search
+
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - def_list
   - tables
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/SiliconWit
+      link: https://github.com/SiliconWit/
+    - icon: fontawesome/solid/globe
+      link: https://siliconwit.com
+  generator: false
+
+extra_css:
+  - stylesheets/custom.css
+
+copyright: Copyright &copy; 2026 SiliconWit
