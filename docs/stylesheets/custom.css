@@ -8,6 +8,11 @@
   --sw-light-gray: #E5E7EB;
   --sw-very-light-gray: #F8FAFC;
 
+  /* Link colors: high-contrast blue for readability */
+  --sw-link: #1565C0;
+  --sw-link-hover: #0D47A1;
+  --sw-link-visited: #6A1B9A;
+
   /* Material theme overrides - Light mode */
   --md-primary-fg-color: #2A9D8F;
   --md-primary-fg-color--light: #3DB3A3;
@@ -23,6 +28,11 @@
   --md-primary-fg-color--dark: #258B7F;
   --md-accent-fg-color: #E9C46A;
   --md-accent-fg-color--transparent: rgba(233, 196, 106, 0.1);
+
+  /* Brighter blue links for dark backgrounds */
+  --sw-link: #64B5F6;
+  --sw-link-hover: #90CAF9;
+  --sw-link-visited: #CE93D8;
 }
 
 /* Admonition customizations using SiliconWit palette */
@@ -76,11 +86,27 @@
 
 /* Links and interactive elements */
 .md-typeset a {
-  color: var(--sw-teal);
+  color: var(--sw-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .md-typeset a:hover {
-  color: var(--md-primary-fg-color--light);
+  color: var(--sw-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+.md-typeset a:visited {
+  color: var(--sw-link-visited);
+}
+
+/* Don't underline buttons styled as links */
+.md-typeset a.md-button,
+.md-typeset a.md-button:hover,
+.md-typeset a.md-button:visited {
+  color: white;
+  text-decoration: none;
 }
 
 /* Code block copy button */
