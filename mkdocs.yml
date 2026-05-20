@@ -50,6 +50,7 @@ nav:
       - Windows (.msi): install/windows.md
       - macOS: install/macos.md
   - Quick start: quickstart.md
+  - Using Seal: using.md
   - FAQ: faq.md
   - Releases: https://github.com/SiliconWit/siwit-seal-releases/releases
 
