@@ -24,4 +24,16 @@ The site is built and deployed to GitHub Pages automatically on every push to `m
 To enable Pages:
 
 1. Push at least one commit to `main`.
-2. In the repo settings → Pages, set **Source** to **GitHub Actions**.
+2. In the repo settings, open **Pages**, then set **Source** to **GitHub Actions**.
+
+## Install slides PDF
+
+The 13-slide install walkthrough lives in `slides/install.tex` and rebuilds to `slides/install.pdf`. The same PDF is shipped on the docs site at `docs/assets/install.pdf` so it is downloadable from the Install page.
+
+Rebuild after edits:
+
+```bash
+cd slides
+pdflatex install.tex && pdflatex install.tex   # run twice so 'X of Y' settles
+cp install.pdf ../docs/assets/install.pdf
+```
